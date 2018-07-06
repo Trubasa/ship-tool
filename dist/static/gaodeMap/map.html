@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+  <title>去这里</title>
+  <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+  <script src="../config.js"></script>
+  <script src="jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.6&key=72263a18a1416a7df1c6ea02d057b1a5&plugin=AMap.ToolBar"></script>
+  <script>
+
+    var key=productConfig.gaodeMapWebKey;
+    var name=getParam('name');
+    var address=getParam('address');
+    function init() {
+      // var address="广东省广州市天河区东澳创意小镇";
+      if(!address){
+        console.error('地址为空!');
+        return;
+      }
+      console.log(address);
+      $.get('http://restapi.amap.com/v3/geocode/geo?key='+key+'&address='+address,function(res){
+        console.log(res);
+        if(res.count>0){
+          initMap(res.geocodes[0]);
+        }else{
+          console.error('查询不到该地址');
+        }
+      });
+
+
+      function initMap(data) {
+        map = new AMap.Map("mapContainer", {
+          zoom: 18,
+          center:data.location.split(',')
+        });
+        marker = new AMap.Marker({
+          map:map,
+          position:data.location.split(','),
+          label: {
+            offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
+            content: "点击Marker打开高德地图"
+          }
+        })
+        marker.markOnAMAP({
+          name:name,
+          position:marker.getPosition()
+        })
+      }
+
+    }
+    /**
+     * 获取url里的参数数值
+     */
+    function getParam (name) {
+      var search = document.location.search;
+      //alert(search);
+      var pattern = new RegExp("[?&]" + name + "\=([^&]+)", "g");
+      var matcher = pattern.exec(search);
+      var items = null;
+      if (null != matcher) {
+        try {
+          items = decodeURIComponent(decodeURIComponent(matcher[1]));
+        } catch (e) {
+          try {
+            items = decodeURIComponent(matcher[1]);
+          } catch (e) {
+            items = matcher[1];
+          }
+        }
+      }
+      return items;
+    }
+  </script>
+</head>
+<body onload="init()">
+<div style="display: none;">
+  <div id="mapContainer" ></div>
+  <div class="button-group" id='button_group' style='top:15px;bottom:inherit'>
+    <img src="http://a.amap.com/lbs/static/img/js-markonapp.png" style='width:120px;height:120px'>
+    <div class='button' style='text-align: center'>手机扫码打开demo</div>
+  </div>
+</div>
+
+</body>
+</html>
