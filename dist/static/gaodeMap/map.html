@@ -20,9 +20,9 @@
         console.error('地址为空!');
         return;
       }
-      console.log(address);
+      //console.log(address);
       $.get('http://restapi.amap.com/v3/geocode/geo?key='+key+'&address='+address,function(res){
-        console.log(res);
+        //console.log(res);
         if(res.count>0){
           initMap(res.geocodes[0]);
         }else{
