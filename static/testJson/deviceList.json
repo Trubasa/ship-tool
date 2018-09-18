@@ -1,0 +1,83 @@
+{
+  "total": 3,
+  "rows": [
+    {
+      "id": "1215",
+      "deviceName": "??12",
+      "deviceId": "1215",
+      "ip": "192.168.1.1",
+      "netMac": "1sf1s11542sfs21f",
+      "wifiMac": null,
+      "upgradeVersion": "131",
+      "applicationVersion": "131",
+      "uid": null,
+      "schoolClassName": "1.1",
+      "isAble": 0,
+      "insertTime": 1513737347000,
+      "lastRepairTime": 1513737351000,
+      "lastChangeTime": 1513737356000,
+      "isDelete": 1,
+      "area": {
+        "id": "402881e660c65d110160c65e49990003",
+        "pid": "402881e660c65d110160c65e17250001",
+        "code": "303",
+        "name": "303",
+        "type": "00",
+        "des": "",
+        "status": "00"
+      }
+    },
+    {
+      "id": "402881eb60c9e9180160ca0c314d0006",
+      "deviceName": "2313",
+      "deviceId": "12313",
+      "ip": "12313",
+      "netMac": "321313",
+      "wifiMac": null,
+      "upgradeVersion": "",
+      "applicationVersion": "",
+      "uid": null,
+      "schoolClassName": "",
+      "isAble": 0,
+      "insertTime": 1515218284000,
+      "lastRepairTime": 1515218284000,
+      "lastChangeTime": 1515218284000,
+      "isDelete": 0,
+      "area": {
+        "id": "402881eb60c9b82f0160c9c0663c0003",
+        "pid": "402881eb60c9b82f0160c9c025f00001",
+        "code": "404",
+        "name": "404",
+        "type": "00",
+        "des": "",
+        "status": "00"
+      }
+    },
+    {
+      "id": "402881eb60c9e9180160ca13db3b000e",
+      "deviceName": "113",
+      "deviceId": "131",
+      "ip": "",
+      "netMac": "131",
+      "wifiMac": null,
+      "upgradeVersion": "",
+      "applicationVersion": "",
+      "uid": null,
+      "schoolClassName": "",
+      "isAble": 0,
+      "insertTime": 1515218787000,
+      "lastRepairTime": 1515218787000,
+      "lastChangeTime": 1515218787000,
+      "isDelete": 0,
+      "area": {
+        "id": "402881e660c65d110160c65ef7f80009",
+        "pid": "402881e660c65d110160c65eb3360007",
+        "code": "202",
+        "name": "202",
+        "type": "00",
+        "des": "",
+        "status": "00"
+      }
+    }
+  ]
+}

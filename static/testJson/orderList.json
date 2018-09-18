@@ -1,0 +1,17 @@
+{
+  "status":200,
+  "data":[{
+    "name": "音量+",
+    "code": "0D1D2D3D4D5D"
+  },{
+    "name": "音量-",
+    "code": "0D1D2D3D4D5D"
+  },{
+    "name": "屏幕升",
+    "code": "0D1D2D3D4D5D"
+  },{
+    "name": "屏幕降",
+    "code": "0D1D2D3D4D5D"
+  }]
+}
+
